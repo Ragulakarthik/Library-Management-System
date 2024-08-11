@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Library Management System</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <header>
+        <h1>Library Management System</h1>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="#new-books">New Books</a></li>
+                <li><a href="register.html">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="registerFormSection">
+            <h2>Register</h2>
+            <form id="registerForm">
+                <div class="flex-row">
+                    <label for="firstName">First Name:</label>
+                    <input type="text" id="firstName" name="firstName" required>
+                </div>
+                <span id="firstNameError" class="error-message"></span>
+                
+                <div class="flex-row">
+                    <label for="lastName">Last Name:</label>
+                    <input type="text" id="lastName" name="lastName" required>
+                </div>
+                <span id="lastNameError" class="error-message"></span>
+                
+                <div class="flex-row">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <span id="emailError" class="error-message"></span>
+                
+                <div class="flex-row">
+                    <label for="phoneNumber">Phone Number:</label>
+                    <input type="tel" id="phoneNumber" name="phoneNumber" required>
+                </div>
+                <span id="phoneNumberError" class="error-message"></span>
+                
+                <div class="flex-row">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <span id="passwordError" class="error-message"></span>
+                
+                <div class="flex-row">
+                    <label for="confirm_password">Confirm Password:</label>
+                    <input type="password" id="confirm_password" name="confirm_password" required>
+                </div>
+                <span id="confirm_passwordError" class="error-message"></span>
+                
+                <button type="button" id="sendOtpButton">Send OTP</button>
+                
+                <div id="otpSection" style="display: none;">
+                    <div class="flex-row">
+                        <label for="otp">Enter OTP:</label>
+                        <input type="text" id="otp" name="otp" required>
+                    </div>
+                    <span id="otpError" class="error-message"></span>
+                    <button type="submit">Verify OTP</button>
+                </div>
+            </form>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 Library Management System</p>
+    </footer>
+    
+    <!-- Response message div -->
+    <div id="responseMessage" class="response-message"></div>
+    
+    <script src="validation.js"></script>
+</body>
+</html>
