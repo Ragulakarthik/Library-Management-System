@@ -1,0 +1,472 @@
+/* General Reset */
+body, h1, h2, p, ul {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #e0f7fa;
+    line-height: 1.6;
+}
+
+/* General styles for the navigation bar */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+}
+
+nav ul li {
+    position: relative;
+    margin-left: 10px;
+}
+
+/* Style for links in the navigation bar */
+nav ul li a {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    background-color: #42a5f5;
+    border-radius: 20px;
+    transition: background-color 0.3s, transform 0.3s;
+    font-weight: bold;
+    font-size: 0.85rem;
+}
+
+nav ul li a:hover {
+    background-color: #00acc1;
+    transform: scale(1.1);
+}
+
+/* Dropdown button styles */
+.dropbtn {
+    cursor: pointer;
+}
+
+/* Dropdown content container, hidden by default */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 10px;
+    padding: 10px 0;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 20px;
+    text-decoration: none;
+    display: block;
+    font-size: 0.85rem;
+    transition: background-color 0.3s;
+    margin-bottom: 5px;
+}
+
+.dropdown-content a:last-child {
+    margin-bottom: 0;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 0;
+    }
+    nav ul li {
+        margin: 5px 0; /* Adjust spacing for list items */
+    }
+    main section {
+        width: 90%; /* Full width on mobile */
+        margin: 0 auto; /* Center on mobile */
+    }
+    .dropdown-content {
+        min-width: 100%; /* Full-width dropdown on smaller screens */
+    }
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #42a5f5, #7e57c2);
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+    margin: 0;
+    flex-shrink: 0;
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+main section {
+    margin-bottom: 20px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+main section:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+footer {
+    background-color: #42a5f5;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px 10px;
+    }
+}
+
+/* Register Form Styles */
+#registerForm {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+#registerForm div {
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+#registerForm label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#registerForm input, #registerForm select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+#registerForm button {
+    width: 100%;
+    padding: 10px;
+    background-color: #42a5f5;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+#registerForm button:hover {
+    background-color: #1e88e5;
+}
+
+.error-message {
+    color: red;
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+.error-border {
+    border: 2px solid red;
+}
+
+/* Response message styles */
+.response-message {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    margin: 0;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #dff0d8;
+    color: #3c763d;
+    border: 1px solid #d6e9c6;
+    display: none;
+    z-index: 1000;
+}
+
+/* Error styles */
+.response-message.error {
+    background-color: #f2dede;
+    color: #a94442;
+    border: 1px solid #ebccd1;
+}
+
+/* Login Page Styles */
+#loginForm {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+#loginForm div {
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+#loginForm label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#loginForm input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+#loginForm button {
+    width: 100%;
+    padding: 10px;
+    background-color: #42a5f5;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+#loginForm button:hover {
+    background-color: #1e88e5;
+}
+
+/* Profile Page Styles */
+#profileForm {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+#profileForm div {
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+#profileForm label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#profileForm input, #profileForm select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+#profileForm input::placeholder {
+    color: #999;
+}
+
+#profileForm button {
+    width: 100%;
+    padding: 10px;
+    background-color: #42a5f5;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+#profileForm button:hover {
+    background-color: #1e88e5;
+}
+
+/* Dashboard Styles */
+#dashboard {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.dashboard-card {
+    background-color: #ffffff; /* Clean white background for contrast */
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.dashboard-card h3 {
+    font-size: 1.2rem;
+    color: #1976d2; /* Blue for headings */
+    margin-bottom: 10px;
+}
+
+.dashboard-card p {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #d32f2f; /* Red for emphasis */
+}
+
+/* Add a colored border to each card */
+.dashboard-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, #42a5f5, #7e57c2); /* Gradient border */
+}
+
+/* Hover effect for cards */
+.dashboard-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Responsive Design for Dashboard */
+@media (max-width: 768px) {
+    .dashboard {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items */
+    }
+
+    .dashboard-item {
+        max-width: 90%; /* Full width on mobile */
+    }
+}
+
+/* Responsive Design for Forms */
+@media (max-width: 768px) {
+    #registerForm, #loginForm, #profileForm {
+        padding: 15px; /* Adjust padding for mobile forms */
+        width: 90%; /* Responsive width */
+    }
+
+    header {
+        flex-direction: column; /* Stack header items vertically */
+        align-items: flex-start;
+        padding: 15px; /* Padding adjustments */
+    }
+
+    nav ul {
+        flex-direction: column; /* Vertical navigation on smaller screens */
+    }
+
+    nav ul li {
+        margin: 5px 0; /* Adjust spacing for list items */
+    }
+}
+/* Graph Section Styles */
+#graph {
+    margin-top: 20px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+#graph h2 {
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+canvas {
+    max-width: 100%;
+    height: auto;
+}
+
+footer {
+    background-color: #42a5f5;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+}
+
+#home {
+    background-color: #f9f9f9; /* Light background for contrast */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px; /* Space below the section */
+    background-color: #ffffff;
+}
+
+#home h2 {
+    font-size: 2rem;
+    color: #090101; /* Darker text for readability */
+    margin-bottom: 10px;
+}
+
+#home p {
+    font-size: 1.1rem;
+    color: #555; /* Slightly lighter for a softer look */
+    line-height: 1.6; /* Improve readability */
+}
