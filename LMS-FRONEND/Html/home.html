@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management System</title>
+    <link rel="stylesheet" href="D:\downloads\Projects\LMS-FRONEND\CSS\home.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Library Management System</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0);" class="dropbtn">Manage</a>
+                    <div class="dropdown-content">
+                        <a href="author.html">Authors</a>
+                        <a href="publisher.html">Publishers</a>
+                        <a href="manageBooks.html">Books</a>
+                        <a href="student.html">Students</a>
+                    </div>
+                </li>
+                <li><a href="requestbook.html">Request</a></li>
+                <li><a href="AllInfo.html">Information</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li id="loginOption"><a href="login.html">Login</a></li>
+                <li id="profileOption"><a href="profile.html">Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="home">
+            <h2>Welcome to the Library!</h2>
+            <p>Unlock the universe of knowledge—where every book opens a new door to discovery!</p>
+            <p>Join a community of learners and let your imagination soar through the pages of countless stories!</p>
+        </section>
+        
+
+        <section id="dashboard">
+            <h2>Dashboard</h2>
+            <div class="dashboard-grid">
+                <div class="dashboard-card">
+                    <h3>Students Registered</h3>
+                    <p id="studentsRegistered">150</p>
+                </div>
+                <div class="dashboard-card">
+                    <h3>Books Present</h3>
+                    <p id="booksPresent">300</p>
+                </div>
+                <div class="dashboard-card">
+                    <h3>Authors</h3>
+                    <p id="authorsCount">45</p>
+                </div>
+                <div class="dashboard-card">
+                    <h3>Publishers</h3>
+                    <p id="publishersCount">20</p>
+                </div>
+                <div class="dashboard-card">
+                    <h3>Books Issued</h3>
+                    <p id="booksIssued">80</p>
+                </div>
+                <div class="dashboard-card">
+                    <h3>Books Yet to be Returned</h3>
+                    <p id="booksNotReturned">15</p>
+                </div>
+                <div class="dashboard-card">
+                    <h3>Students with Fines</h3>
+                    <p id="studentsWithFines">10</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="graph">
+            <h2>Monthly Book Transactions</h2>
+            <canvas id="bookTransactionsChart"></canvas>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 Library Management System</p>
+    </footer>
+    
+    <script src="D:\downloads\Projects\LMS-FRONEND\JS\home.js"></script>
+</body>
+</html>
