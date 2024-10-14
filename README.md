@@ -3,7 +3,7 @@
 **Introduction**
 The Library Management System is a comprehensive tool designed to manage the operations of a library, including managing authors, publishers, books, and students. This system provides seamless CRUD (Create, Read, Update, Delete) operations, along with an efficient book issuing process. The system integrates OTP-based student registration and automates email notifications for issued books, including a 10-day deadline for returning the book.
 
-Check out the Front Page : https://ragulakarthik.github.io/LMS/LMS-FRONEND/index.html
+Check out the Front Page : https://ragulakarthik.github.io/Library-Management-System/LMS-FRONEND/index.html
 
 **Features**
 
