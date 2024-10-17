@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Library Management System</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <header>
+        <h1>Library Management System</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0);" class="dropbtn">Manage</a>
+                    <div class="dropdown-content">
+                        <a href="author.html">Authors</a>
+                        <a href="publisher.html">Publishers</a>
+                        <a href="manageBooks.html">Books</a>
+                        <a href="student.html">Students</a>
+                    </div>
+                </li>
+                <li><a href="requestbook.html">Request</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li id="loginOption"><a href="login.html">Login</a></li>
+                <li id="profileOption"><a href="profile.html">Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="registerFormSection">
+            <h2>Register</h2>
+            <form id="registerForm">
+                <div class="flex-row">
+                    <label for="firstName">First Name:</label>
+                    <input type="text" id="firstName" name="firstName" placeholder="Enter your first name" required>
+                </div>
+                <span id="firstNameError" class="error-message"></span>
+                
+                <div class="flex-row">
+                    <label for="lastName">Last Name:</label>
+                    <input type="text" id="lastName" name="lastName" placeholder="Enter your last name" required>
+                </div>
+                <span id="lastNameError" class="error-message"></span>
+                
+                <div class="flex-row">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                </div>
+                <span id="emailError" class="error-message"></span>
+                
+                <div class="flex-row">
+                    <label for="phoneNumber">Phone Number:</label>
+                    <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="Enter your phone number" required>
+                </div>
+                <span id="phoneNumberError" class="error-message"></span>
+                
+                <div class="flex-row">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" placeholder="Create a password" required>
+                </div>
+                <span id="passwordError" class="error-message"></span>
+                
+                <div class="flex-row">
+                    <label for="confirm_password">Confirm Password:</label>
+                    <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm your password" required>
+                </div>
+                <span id="confirm_passwordError" class="error-message"></span>
+                
+                <div class="flex-row">
+                    <label for="course">Course:</label>
+                    <select id="course" name="course" required>
+                        <option value="">Select Course</option>
+                        <option value="B.Tech">B.Tech</option>
+                        <option value="M.Tech">M.Tech</option>
+                        <option value="MCA">MCA</option>
+                        <option value="MBA">MBA</option>
+                        <option value="Pharmacy">Pharmacy</option>
+                    </select>
+                </div>
+                
+                <div class="flex-row">
+                    <label for="branch">Branch:</label>
+                    <select id="branch" name="branch" required>
+                        <option value="">Select Branch</option>
+                        <option value="CSE">CSE</option>
+                        <option value="CSEDS">CSEDS</option>
+                        <option value="CSEAIML">CSEAIML</option>
+                        <option value="CSEAI">CSEAI</option>
+                        <option value="IT">IT</option>
+                        <option value="EEE">EEE</option>
+                        <option value="ECE">ECE</option>
+                        <option value="CIVIL">CIVIL</option>
+                        <option value="MECH">MECH</option>
+                    </select>
+                </div>
+                
+                <button type="button" id="sendOtpButton">Send OTP</button>
+                
+                <div id="otpSection" style="display: none;">
+                    <div class="flex-row">
+                        <label for="otp">Enter OTP:</label>
+                        <input type="text" id="otp" name="otp" placeholder="Enter the OTP sent to your email" required>
+                    </div>
+                    <span id="otpError" class="error-message"></span>
+                    <button type="submit">Verify OTP</button>
+                </div>
+            </form>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 Library Management System</p>
+    </footer>
+    
+    <!-- Response message div -->
+    <div id="responseMessage" class="response-message"></div>
+    
+    <script src="validation.js"></script>
+</body>
+</html>

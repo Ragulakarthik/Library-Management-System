@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Form</title>
+    <link rel="stylesheet" href="manageBook.css">
+</head>
+<body>
+    <header>
+        <h1>Library Management System</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0);" class="dropbtn">Manage</a>
+                    <div class="dropdown-content">
+                        <a href="author.html">Authors</a>
+                        <a href="publisher.html">Publishers</a>
+                        <a href="manageBooks.html">Books</a>
+                        <a href="student.html">Students</a>
+                    </div>
+                </li>
+                <li><a href="requestbook.html">Request</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li id="loginOption"><a href="login.html">Login</a></li>
+                <li id="profileOption"><a href="profile.html">Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="bookFormSection">
+            <h2>Book Details Form</h2>
+            <form id="bookForm">
+                <div class="flex-row">
+                    <label for="bookId">Book ID:</label>
+                    <input type="text" id="bookId" name="bookId" placeholder="Enter Book ID" required>
+                </div>
+                <span id="bookIdError" class="error-message"></span>
+                
+                <div class="flex-row">
+                    <label for="authorId">Author ID:</label>
+                    <input type="text" id="authorId" name="authorId" placeholder="Enter Author ID" required>
+                </div>
+                <span id="authorIdError" class="error-message"></span>
+                
+                <div class="flex-row">
+                    <label for="publisherId">Publisher ID:</label>
+                    <input type="text" id="publisherId" name="publisherId" placeholder="Enter Publisher ID" required>
+                </div>
+                <span id="publisherIdError" class="error-message"></span>
+
+                <div class="flex-row">
+                    <label for="bookTitle">Book Title:</label>
+                    <input type="text" id="bookTitle" name="bookTitle" placeholder="Enter Book Title" required>
+                </div>
+                <span id="bookTitleError" class="error-message"></span>
+                
+                <div class="flex-row">
+                    <label for="quantity">Quantity:</label>
+                    <input type="number" id="quantity" name="quantity" placeholder="Enter Quantity" min="1" required>
+                </div>
+                <span id="quantityError" class="error-message"></span>
+
+                <div class="button-container">
+                    <button type="button" onclick="submitForm('add')">Add</button>
+                    <button type="button" class="update" onclick="submitForm('update')">Update</button>
+                    <button type="button" class="delete" onclick="submitForm('delete')">Delete</button>
+                    <button type="reset" form="bookForm">Clear</button>
+                </div>
+            </form>
+        </section>
+    </main>
+    
+    <script>
+        function submitForm(action) {
+            const form = document.getElementById('bookForm');
+            form.action = `/submitBook?action=${action}`;
+            form.method = 'POST';
+            form.submit();
+        }
+    </script>
+    <footer>
+        <p>&copy; 2024 Library Management System</p>
+    </footer>
+</body>
+</html>

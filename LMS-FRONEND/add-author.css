@@ -1,0 +1,202 @@
+/* Basic Reset */
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e0f7fa;
+    color: #333;
+    line-height: 1.6;
+    padding-bottom: 100px; /* Make room for the fixed footer */
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: linear-gradient(135deg, #42a5f5, #7e57c2);
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+    margin: 0;
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+}
+
+nav ul li {
+    position: relative;
+    margin-left: 10px;
+}
+
+/* Style for links in the navigation bar */
+nav ul li a {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    background-color: #42a5f5;
+    border-radius: 20px;
+    transition: background-color 0.3s, transform 0.3s;
+    font-weight: bold;
+    font-size: 0.85rem;
+}
+
+nav ul li a:hover {
+    background-color: #00acc1;
+    transform: scale(1.1);
+}
+
+/* Dropdown button styles */
+.dropbtn {
+    cursor: pointer;
+}
+
+/* Dropdown content container, hidden by default */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 10px;
+    padding: 10px 0;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 20px;
+    text-decoration: none;
+    display: block;
+    font-size: 0.85rem;
+    transition: background-color 0.3s;
+    margin-bottom: 5px;
+}
+
+.dropdown-content a:last-child {
+    margin-bottom: 0;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Main Section Styling */
+main {
+    padding: 20px;
+    max-width: 600px;
+    margin: 20px auto;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px; /* Consistent font size for inputs */
+    width: 100%; /* Ensure full-width inputs */
+}
+
+textarea {
+    resize: vertical; /* Allow vertical resizing of textarea */
+    min-height: 80px; /* Minimum height for the textarea */
+}
+
+.error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: -10px; /* Position above the input field */
+    margin-bottom: 10px; /* Space below the error message */
+}
+
+button[type="button"],
+button[type="submit"] {
+    padding: 10px;
+    background-color: #42a5f5; /* Button color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button[type="button"]:hover,
+button[type="submit"]:hover {
+    background-color: #145e9a; /* Darker button color on hover */
+}
+
+/* Response Message */
+.response-message {
+    margin-top: 10px;
+    font-size: 14px;
+    text-align: center;
+    display: none; /* Hide by default */
+}
+
+.response-message.error {
+    color: red; /* Error message color */
+}
+
+.response-message.success {
+    color: green; /* Success message color */
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    input[type="text"],
+    input[type="email"],
+    button[type="button"],
+    button[type="submit"] {
+        font-size: 14px; /* Smaller font size for mobile */
+    }
+}
+
+footer {
+    background-color: #42a5f5;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+}

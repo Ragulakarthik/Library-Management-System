@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Authors</title>
+    <link rel="stylesheet" href="author.css">
+</head>
+<body>
+    <header>
+        <h1>Library Management System</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0);" class="dropbtn">Manage</a>
+                    <div class="dropdown-content">
+                        <a href="author.html">Authors</a>
+                        <a href="publisher.html">Publishers</a>
+                        <a href="manageBooks.html">Books</a>
+                        <a href="student.html">Students</a>
+                    </div>
+                </li>
+                <li><a href="requestbook.html">Request</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li id="loginOption"><a href="login.html">Login</a></li>
+                <li id="profileOption"><a href="profile.html">Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Add Author Button -->
+        <div class="top-right">
+            <a href="add-author.html">
+                <button id="add-author-btn">Add Author</button>
+            </a>
+        </div>
+        
+        <!-- Search Fields -->
+        <div class="search-container">
+            <p>ID</p>
+            <input type="text" id="search-id" placeholder="Search by ID">
+            <p>Name</p>
+            <input type="text" id="search-name" placeholder="Search by Name">
+            <button id="get-data-btn">Get All Authors</button>
+        </div>
+
+        <!-- Authors Table -->
+        <table id="authors-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Phone Number</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Library Management System</p>
+    </footer>
+
+    <script src="author.js"></script>
+</body>
+</html>

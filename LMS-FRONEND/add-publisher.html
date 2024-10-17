@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Publisher</title>
+    <link rel="stylesheet" href="add-publisher.css">
+</head>
+<body>
+    <header>
+        <h1>Library Management System</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0);" class="dropbtn">Manage</a>
+                    <div class="dropdown-content">
+                        <a href="author.html">Authors</a>
+                        <a href="publisher.html">Publishers</a>
+                        <a href="manageBooks.html">Books</a>
+                        <a href="student.html">Students</a>
+                    </div>
+                </li>
+                <li><a href="requestbook.html">Request</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li id="loginOption"><a href="login.html">Login</a></li>
+                <li id="profileOption"><a href="profile.html">Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <center><h2>Add New Publisher</h2></center>
+        <form id="addPublisherForm">
+            <div>
+                <label for="publisherName">Publisher Name:</label>
+                <input type="text" id="publisherName" name="publisherName" required>
+                <span id="publisherNameError" class="error-message"></span>
+            </div>
+            <div>
+                <label for="phoneNumber">phone Number:</label>
+                <input type="text" id="phoneNumber" name="phoneNumber" required>
+                <span id="phoneNumberError" class="error-message"></span>
+            </div>
+            <button type="button" id="addPublisherButton">Add Publisher</button>
+            <div id="responseMessage" class="response-message"></div>
+        </form>
+        
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Library Management System</p>
+    </footer>
+
+    <script src="add-publisher.js"></script>
+</body>
+</html>

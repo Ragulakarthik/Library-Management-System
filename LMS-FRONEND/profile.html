@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - Library Management System</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <header>
+        <h1>Library Management System</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0);" class="dropbtn">Manage</a>
+                    <div class="dropdown-content">
+                        <a href="author.html">Authors</a>
+                        <a href="publisher.html">Publishers</a>
+                        <a href="manageBooks.html">Books</a>
+                        <a href="student.html">Students</a>
+                    </div>
+                </li>
+                <li><a href="requestbook.html">Request</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li id="loginOption"><a href="login.html">Login</a></li>
+                <li id="profileOption"><a href="profile.html">Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="profileSection">
+            <h2>Update Your Profile</h2>
+            <form id="profileForm">
+                <div class="flex-row">
+                    <label for="rollNo">Roll Number:</label>
+                    <input type="text" id="rollNo" name="rollNo" placeholder="Enter your roll number" required>
+                </div>
+                <span id="rollNoError" class="error-message"></span>
+                
+                <div class="flex-row">
+                    <label for="firstName">First Name:</label>
+                    <input type="text" id="firstName" name="firstName" placeholder="Enter your first name" required>
+                </div>
+                <span id="firstNameError" class="error-message"></span>
+                
+                <div class="flex-row">
+                    <label for="lastName">Last Name:</label>
+                    <input type="text" id="lastName" name="lastName" placeholder="Enter your last name" required>
+                </div>
+                <span id="lastNameError" class="error-message"></span>
+                
+                <div class="flex-row">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+                <span id="emailError" class="error-message"></span>
+                
+                <div class="flex-row">
+                    <label for="phoneNumber">Phone Number:</label>
+                    <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="Enter your phone number" required>
+                </div>
+                <span id="phoneNumberError" class="error-message"></span>
+                
+                <div class="flex-row">
+                    <label for="course">Course:</label>
+                    <select id="course" name="course" required>
+                        <option value="">Select Course</option>
+                        <option value="B.Tech">B.Tech</option>
+                        <option value="M.Tech">M.Tech</option>
+                        <option value="MCA">MCA</option>
+                        <option value="MBA">MBA</option>
+                        <option value="Pharmacy">Pharmacy</option>
+                    </select>
+                </div>
+                
+                <div class="flex-row">
+                    <label for="branch">Branch:</label>
+                    <select id="branch" name="branch" required>
+                        <option value="">Select Branch</option>
+                        <option value="CSE">CSE</option>
+                        <option value="CSEDS">CSEDS</option>
+                        <option value="CSEAIML">CSEAIML</option>
+                        <option value="CSEAI">CSEAI</option>
+                        <option value="IT">IT</option>
+                        <option value="EEE">EEE</option>
+                        <option value="ECE">ECE</option>
+                        <option value="CIVIL">CIVIL</option>
+                        <option value="MECH">MECH</option>
+                    </select>
+                </div>
+                
+                <button type="submit">Update Profile</button>
+            </form>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 Library Management System</p>
+    </footer>
+    <div id="profileResponseMessage" class="response-message"></div>
+    
+    <script src="profile.js"></script>
+</body>
+</html>
