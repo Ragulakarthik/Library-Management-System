@@ -5,7 +5,10 @@ The **Library Management System** is a comprehensive tool for managing library o
 ## 🔗 Links
 - **Backend Code**: [GitLab Repo](https://gitlab.com/Ragula_Karthik/lms)
 - **Live Frontend Demo**: [Live Demo](https://ragulakarthik.github.io/Library-Management-System/LMS-FRONEND/index.html)
+- 
+![Screenshot 2024-10-17 113425](https://github.com/user-attachments/assets/0229215d-7474-4f43-a609-672cd53afe93)
 
+![Screenshot 2024-10-17 113517](https://github.com/user-attachments/assets/1f6dbd49-a91a-4354-865a-e83eff5c72cc)
 ---
 
 ## 🚀 Features
