@@ -1,131 +1,107 @@
-# **Library Management System**
+# 📚 Library Management System
 
-**Introduction**
-The Library Management System is a comprehensive tool designed to manage the operations of a library, including managing authors, publishers, books, and students. This system provides seamless CRUD (Create, Read, Update, Delete) operations, along with an efficient book issuing process. The system integrates OTP-based student registration and automates email notifications for issued books, including a 10-day deadline for returning the book.
+The **Library Management System** is a comprehensive tool for managing library operations, including managing authors, publishers, books, and students. It provides seamless CRUD (Create, Read, Update, Delete) operations and an efficient book issuing process, along with OTP-based student registration and automated email notifications.
 
-Check the Back end code in the git lab also : https://gitlab.com/Ragula_Karthik/lms
+## 🔗 Links
+- **Backend Code**: [GitLab Repo](https://gitlab.com/Ragula_Karthik/lms)
+- **Live Frontend Demo**: [Live Demo](https://ragulakarthik.github.io/Library-Management-System/LMS-FRONEND/index.html)
 
-Check out the Front Page : https://ragulakarthik.github.io/Library-Management-System/LMS-FRONEND/index.html
+---
 
-![image](https://github.com/user-attachments/assets/99f533c8-3227-410c-918b-631abaa6cf97)
+## 🚀 Features
 
-![image](https://github.com/user-attachments/assets/7a6e74d2-f19f-4662-bc85-e54cd4870d97)
+- **OTP-Based Registration**: Students are required to verify their registration with an OTP sent via email.
+- **CRUD Operations**: Manage authors, publishers, books, and students.
+- **Book Issuing & Return**: Issue books to students and manage return deadlines with automatic fines.
+- **Email Notifications**: Automated emails for issued books and overdue reminders.
+- **Fine Calculation**: Overdue books incur a ₹10/day fine.
 
-**Features**
+---
 
-**OTP-Based Registration:**
+## 🛠️ Technology Stack
 
-During student registration, an OTP (One-Time Password) is sent to the registered email for verification.
-The registration completes only after the OTP is successfully verified.
+- **Backend**: Spring Boot
+- **Frontend**: HTML5, CSS3, JavaScript
+- **Database**: MySQL
+- **OTP & Email Integration**: Java Mail API
+- **Validation**: Jakarta Bean Validation
 
-**CRUD Operations:**
+---
 
-Perform Create, Read, Update, and Delete operations on the following entities:
+## 📝 How It Works
 
-**Authors**: Manage author information.
+### 👨‍🎓 Student Registration
 
-**Publishers**: Manage publisher details.
+1. The student fills out a registration form.
+2. An OTP is sent to the student's email.
+3. Registration is completed only after successful OTP verification.
 
-**Books**: Add, update, or delete book records.
+### 🔄 CRUD Operations
 
-**Students**: Manage student profiles, including their course and branch details.
+Admins can manage authors, publishers, books, and students through an easy-to-use interface. All changes are reflected in real-time.
 
-**Book Issuing and Return:**
+### 📤 Issuing Books
 
-Books can be issued to students, and an email notification is sent, including details of the book and a 10-day deadline for returning it.
-If the book is not returned within the deadline, a fine of ₹10 per day will be imposed on the student.
-The student must clear the fine before being allowed to return the book.
+Admins can select a student and a book to issue. The system will send an email to the student, detailing the book's return deadline.
 
-**Email Notifications:**
+### 💵 Fine Calculation
 
-Automated emails are sent when a book is issued, containing the following information:
-Book details
-Issuing date
-Return deadline
-Fine details (if applicable)
+A ₹10 per day fine is applied for late returns. The fine must be paid before the return process can be completed.
 
-**Fine Calculation:**
+---
 
-If the book is returned late, the system calculates the fine based on the overdue days (₹10 per day).
-The student must pay the fine before completing the return process.
+## 🚀 Getting Started
 
-**Technology Stack**:
+### ✅ Prerequisites
 
-**Backend**: Spring Boot
+- Java 11 or above
+- Spring Boot
+- MySQL
+- Java Mail API for sending OTP and email notifications
 
-**Frontend**: HTML5, CSS3, JavaScript
+### 🔧 Installation
 
-**Database**: SQL (MySQL)
+1. **Clone the repository**:
+    ```bash
+    git clone https://gitlab.com/Ragula_Karthik/lms.git
+    ```
 
-**OTP and Email Integration**: Java Mail API
+2. **Set up the database**:
+    - Create a MySQL database.
+    - Update the `application.properties` file with your database credentials:
+    ```properties
+    spring.datasource.url=jdbc:mysql://localhost:3306/librarydb
+    spring.datasource.username=yourusername
+    spring.datasource.password=yourpassword
+    ```
 
-**Validation**: Jakarta Bean Validation
+3. **Run the application**:
+    ```bash
+    ./mvnw spring-boot:run
+    ```
 
-****How It Works****
+4. **Access the application**:
+    Open your browser and go to `http://localhost:8080` to access the Library Management System.
 
-**Student Registration:**
+---
 
-The student fills out the registration form, providing essential details such as name, course, branch, and email.
-Upon submission, an OTP is sent to the student’s email for verification.
-Once the OTP is verified, the registration is successful.
+## 🌟 Future Enhancements
 
-**CRUD Operations:**
+- Implement SMS-based OTP in addition to email verification.
+- Add a book reservation feature.
+- Introduce variable fine rates for different categories of books.
+- Generate detailed reports for issued books, overdue fines, and book availability.
 
-Admins can manage authors, publishers, books, and students by performing CRUD operations through a user-friendly interface.
-Changes are reflected in the database in real-time.
+---
 
-**Issuing Books:**
+## 🤝 Contributing
 
-Admins can issue a book to a student by selecting the student and book records.
-An email is sent to the student with the book details and return deadline.
+Contributions are welcome! Please submit a pull request or open an issue to discuss any proposed changes.
 
-**Fine Calculation and Return:**
+---
 
-If a book is not returned within the 10-day window, a fine of ₹10 per day is calculated.
-The student must pay the outstanding fine to proceed with returning the book.
-Getting Started
-Prerequisites
-Java 11 or above
-Spring Boot framework
-PostgreSQL or MySQL database
-Java Mail API for sending OTP and book issue notifications
-Installation
+## 📧 Contact
 
-**Clone the Repository:**
+For any queries or support, please reach out to:
 
-bash
-Copy code
-git clone https://github.com/Ragulakarthik/lms.git
-
-**Set Up the Database:**
-
-Create MySQL database.
-Update the application.properties file with your database credentials:
-properties
-Copy code
-spring.datasource.url=jdbc:mySql://localhost:3306/librarydb
-spring.datasource.username=yourusername
-spring.datasource.password=yourpassword
-
-**Run the Application:**
-
-bash
-Copy code
-./mvnw spring-boot:run
-Access the Application: Open your browser and go to http://localhost:8080 to access the Library Management System.
-
-**Future Enhancements**:
-
-Implementing SMS-based OTP in addition to email OTP.
-Adding book reservation functionality.
-Enhancing fine management with different fine rates for different types of books.
-Generating detailed reports for overdue books, issued books, and fines collected.
-
-**Contributing**:
-
-Contributions are welcome! Please submit a pull request or open an issue to discuss any changes.
-
-**Contact**
-For any queries or issues, feel free to reach out:
-
-**Email: ragulakarthik04@gmail.com**
+**Email**: ragulakarthik04@gmail.com
