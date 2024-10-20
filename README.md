@@ -1,6 +1,6 @@
 # 📚 Library Management System
 
-The **Library Management System** is a comprehensive tool for managing library operations, including managing authors, publishers, books, and students. It provides seamless CRUD (Create, Read, Update, Delete) operations and an efficient book issuing process, along with OTP-based student registration and automated email notifications.
+The **Library Management System** is a comprehensive tool for managing library operations, including managing authors, publishers, books, and students. It provides seamless CRUD (Create, Read, Update, Delete) operations and an efficient book issuing process, along with OTP-based student registration and automated email notifications.The system is also Dockerized, making deployment even more efficient.
 
 ## 🔗 Links
 - **Backend Code**: [GitLab Repo](https://gitlab.com/Ragula_Karthik/lms)
@@ -15,7 +15,7 @@ The **Library Management System** is a comprehensive tool for managing library o
 - **Book Issuing & Return**: Issue books to students and manage return deadlines with automatic fines.
 - **Email Notifications**: Automated emails for issued books and overdue reminders.
 - **Fine Calculation**: Overdue books incur a ₹10/day fine.
-
+- **Dockerized Application**: Deployed using Docker for ease of setup, with MySQL as the database.
 ---
 
 ## 🛠️ Technology Stack
@@ -25,7 +25,7 @@ The **Library Management System** is a comprehensive tool for managing library o
 - **Database**: MySQL
 - **OTP & Email Integration**: Java Mail API
 - **Validation**: Jakarta Bean Validation
-
+- **Containerization**: Docker
 ---
 
 ## 📝 How It Works
@@ -58,6 +58,7 @@ A ₹10 per day fine is applied for late returns. The fine must be paid before t
 - Spring Boot
 - MySQL
 - Java Mail API for sending OTP and email notifications
+- Docker (for containerized setup)
 
 ### 🔧 Installation
 
@@ -82,6 +83,12 @@ A ₹10 per day fine is applied for late returns. The fine must be paid before t
 
 4. **Access the application**:
     Open your browser and go to `http://localhost:8080` to access the Library Management System.
+
+5. **Docker Building**:
+   ![image](https://github.com/user-attachments/assets/1d0cb105-cb25-4dae-9610-4b451bf584c2)
+   ![image](https://github.com/user-attachments/assets/dbf51ccc-15f6-4834-934d-a3f4c031ad4e)
+   ![image](https://github.com/user-attachments/assets/5a273684-f1cd-4551-9cb6-320c8b355158)
+   ![image](https://github.com/user-attachments/assets/7317d857-ada7-465c-ad37-aeef742819a2)
 
 ---
 
