@@ -5,10 +5,19 @@ The **Library Management System** is a comprehensive tool for managing library o
 ## 🔗 Links
 - **Backend Code**: [GitLab Repo](https://gitlab.com/Ragula_Karthik/lms)
 - **Live Frontend Demo**: [Live Demo](https://ragulakarthik.github.io/Library-Management-System/LMS-FRONEND/index.html)
-- 
+
 ![Screenshot 2024-10-17 113425](https://github.com/user-attachments/assets/0229215d-7474-4f43-a609-672cd53afe93)
 
 ![Screenshot 2024-10-17 113517](https://github.com/user-attachments/assets/1f6dbd49-a91a-4354-865a-e83eff5c72cc)
+
+![image](https://github.com/user-attachments/assets/b1af5b4b-6100-4d90-9454-a62d3e99e418)
+
+![image](https://github.com/user-attachments/assets/95fb43f1-d447-4652-a9f5-8ddfe83b0584)
+
+![image](https://github.com/user-attachments/assets/22325c4f-c42b-4d78-bf94-4b1a9bf374ac)
+
+
+
 ---
 
 ## 🚀 Features
@@ -60,6 +69,7 @@ A ₹10 per day fine is applied for late returns. The fine must be paid before t
 - Java 11 or above
 - Spring Boot
 - MySQL
+- Swagger
 - Java Mail API for sending OTP and email notifications
 - Docker (for containerized setup)
 
